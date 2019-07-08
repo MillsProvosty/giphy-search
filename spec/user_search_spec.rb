@@ -1,10 +1,9 @@
-# require 'rails_helper'
-#
-# RSpec.describe "As a user "
-# # As a user
-# # When I visit "/"
-# # And I enter "tiger" in the search box
-# # and I click "Search"
-# # Then my path should be /search with "q=tiger" in the parameters
-# # And I should see "5 Results"
-# # And I should see an id, a url, and the gif.
+require 'rails_helper'
+
+RSpec.describe "As a user on my dashboard page" do
+  describe "I enter tiger in the search box, and click search, path should be q=tiger in the params" do
+    scenario "I shoulid see '5 Results', an id, url and gif "
+    visit "/"
+
+  end
+end
