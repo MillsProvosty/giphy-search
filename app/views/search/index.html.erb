@@ -1,0 +1,6 @@
+<h1> <% facade.result_count %> Results</h1>
+  <% facade.search_results.each do |result| %>
+    <%= result.id %>
+    <%= result.url %>
+    <%= result.gif %>
+  <% end %>
