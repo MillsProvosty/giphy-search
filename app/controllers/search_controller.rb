@@ -3,5 +3,5 @@ class SearchController < ApplicationController
       render locals: {
         facade: SearchFacade.new(params[:q])
       }
-    end
+  end
 end

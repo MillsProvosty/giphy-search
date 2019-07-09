@@ -1,6 +1,6 @@
-<h1> <% facade.result_count %> Results</h1>
-  <% facade.search_results.each do |result| %>
-    <%= result.id %>
-    <%= result.url %>
-    <%= result.gif %>
+<h1> <%= facade.limited_results.count %> Results</h1>
+
+  <% facade.limited_results.each do |result| %>
+    <%= result[:slug] %>
+    <%= result[:url] %>
   <% end %>

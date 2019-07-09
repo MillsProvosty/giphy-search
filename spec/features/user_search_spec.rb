@@ -21,9 +21,6 @@ describe "As a user on my dashboard page" do
       expect(page).to have_content("5 Results")
 
       #  And I should see an id, a url, and the gif.
-      within(page.all(".giphy_search_results")[0]) do
-        expect(page).to have_xpath("//img[contains(@src,'something.jpg')]")
-      end
     end
   end
 

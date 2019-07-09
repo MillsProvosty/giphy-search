@@ -3,18 +3,10 @@ class SearchFacade
     @query = query
   end
 
-  def result_count
-    binding.pry
+  def limited_results
     params = {q: @query}
-    fetch_data("/v1/gifs/search", params)[:data].count
+    fetch_data("/v1/gifs/search", params)[:data][0..4]
   end
-
-  def result_name
-    params = {q: @query}
-    fetch_data("/v1/gifs/search", params)[:data].first[:slug]
-  end
-
-
 
   private
     def conn
